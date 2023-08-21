@@ -11,11 +11,11 @@ function App() {
   };
 
   return (
-    <div className="App">
+    <main className="App">
       <h1>Mood Tracker</h1>
       <MoodForm onAddMood={addMoodEntry} />
-      <MoodHistory moodHistory={moodHistory} />
-    </div>
+      {/* <MoodHistory moodHistory={moodHistory} /> */}
+    </main>
   );
 }
 

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './MoodForm.css';
 
 function MoodForm({ onAddMood }) {
   const [selectedMood, setSelectedMood] = useState('');
@@ -16,25 +17,25 @@ function MoodForm({ onAddMood }) {
   };
 
   return (
-    <div>
+    <section className='moodForm'>
       <h2>Registrar Estado de Ánimo</h2>
-      <form onSubmit={handleSubmit}>
-        <label>
+      <form className='form' onSubmit={handleSubmit}>
+        <label className='Seleccion'>
           Selecciona tú estado de Ánimo:
-          <select value={selectedMood} onChange={(e) => setSelectedMood(e.target.value)}>
+          <select className='opciones' value={selectedMood} onChange={(e) => setSelectedMood(e.target.value)}>
             <option value="" disabled>Tú estado de ánimo es:</option>
             {moodOptions.map((mood, index) => (
               <option key={index} value={mood}>{mood}</option>
             ))}
           </select>
         </label>
-        <label>
+        <label className='Actividades'>
           Actividades:
-          <input type="text" value={activities} onChange={(e) => setActivities(e.target.value)} />
+          <textarea className='descripcion' rows={4} cols={30} value={activities} onChange={(e) => setActivities(e.target.value)} />
         </label>
-        <button type="submit">Registrar</button>
+        <button  className='boton' type="submit">Enviar</button>
       </form>
-    </div>
+    </section>
   );
 }
 
