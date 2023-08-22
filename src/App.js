@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './App.css';
+import AuthForm from './components/AuthForm';
 import MoodForm from './components/MoodForm';
 import MoodHistory from './components/MoodHistory';
 
@@ -12,9 +13,10 @@ function App() {
 
   return (
     <main className="App">
+      <AuthForm/>
       <h1>Mood Tracker</h1>
       <MoodForm onAddMood={addMoodEntry} />
-      {/* <MoodHistory moodHistory={moodHistory} /> */}
+      { <MoodHistory moodHistory={moodHistory} /> }
     </main>
   );
 }
