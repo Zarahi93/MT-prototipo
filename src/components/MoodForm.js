@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './MoodForm.css';
 import db from '../firebase.js';
 import { collection, addDoc } from "firebase/firestore"; 
-import AuthForm from './AuthForm';
+import AuthForm from './AuthForm'; // Importar el componente Login
 import { getAuth, onAuthStateChanged } from "firebase/auth";
 
 
